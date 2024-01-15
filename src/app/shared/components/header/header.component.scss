@@ -1,0 +1,26 @@
+.header {
+    background-color: rgba(20, 29, 47, 1);
+    height: 110px;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline:10%;
+    display: flex;
+    font-family: 'Poppins';
+}
+
+.links{
+    display: flex;
+    gap: 20px;
+}
+
+.name{
+    display: flex;
+    font-size: 32px;
+    font-family: 'Poppins';
+    font-weight: 800;
+    color: white;;
+
+    >span{
+        color: rgba(151, 71, 255, 1)
+    }
+}
