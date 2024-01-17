@@ -3,24 +3,44 @@
     height: 110px;
     justify-content: space-between;
     align-items: center;
-    padding-inline:10%;
+    padding-inline: 10%;
     display: flex;
     font-family: 'Poppins';
+    z-index: 900;
+    max-width: 100vw;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
-.links{
+.links {
     display: flex;
     gap: 20px;
+    font-size: 23px;
+
+    >a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            color: rgba(112, 230, 28, 1);
+        }
+    }
+
 }
 
-.name{
+.name {
     display: flex;
     font-size: 32px;
     font-family: 'Poppins';
     font-weight: 800;
-    color: white;;
+    color: white;
 
-    >span{
+
+    >span {
         color: rgba(151, 71, 255, 1)
     }
 }
