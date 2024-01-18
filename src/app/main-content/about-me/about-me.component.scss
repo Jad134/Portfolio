@@ -1,0 +1,90 @@
+.main-container {
+    background-color: rgba(20, 29, 47, 1);
+    padding-top: 40px;
+    display: flex;
+    overflow: hidden;
+}
+
+.left-side {
+    width: 50%;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 20%;
+
+}
+
+.headline {
+    >h2 {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: 90px;
+        color: white;
+    }
+}
+
+.introduction {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+
+.informations {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 80px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+
+.bulp-information {
+    display: flex;
+    gap: 24px;
+}
+
+.puzzle-information {
+    display: flex;
+    gap: 24px;
+}
+
+.right-side {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.circle {
+    width: 450px;
+    height: 450px;
+    border: 3px solid rgba(112, 230, 28, 1);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgba(20, 29, 47, 1);
+    z-index: 4;
+
+    >img {
+        height: 650px;
+        position: absolute;
+        top: -30px;
+    }
+}
+ 
+.line {
+    height: 3px;
+    background-color: rgb(112, 230, 28);
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    /* Zentriere die Linie am oberen Rand des .right-side-Containers */
+}
