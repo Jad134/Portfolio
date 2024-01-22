@@ -59,6 +59,14 @@
     align-items: center;
     position: relative;
 
+    >img {
+        position: absolute;
+        background: none;
+        transform: rotate(0deg);
+        right: 0;
+        top: 0;
+    }
+
 }
 
 .circle {
@@ -79,7 +87,7 @@
         top: -30px;
     }
 }
- 
+
 .line {
     height: 3px;
     background-color: rgb(112, 230, 28);

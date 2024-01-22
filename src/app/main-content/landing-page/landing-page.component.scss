@@ -145,6 +145,7 @@
     gap: 40px;
     padding-top: 20px;
     padding-bottom: 10px;
+    position: relative;
 }
 
 .purple-line {
@@ -159,13 +160,15 @@
 .icons {
     display: flex;
     gap: 40px;
-    
+
 
     >a {
         transition: transform 125ms ease;
-        &:hover{
+
+        &:hover {
             transform: scale(1.2);
         }
+
         >img {
             width: 30px;
             height: 30px;
@@ -174,9 +177,28 @@
     }
 }
 
-.mail{
+.mail {
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 23px;
     color: white;
+}
+
+.scroll-info {
+    position: absolute;
+    right: 50px;
+    transform: rotate(90deg) !important;
+    display: flex;
+    align-items: center;
+    z-index: 200;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 23px;
+    color: white;
+    gap: 8px;
+
+
+    >img {
+        transform: rotate(-90deg);
+    }
 }
