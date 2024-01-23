@@ -1,0 +1,61 @@
+ .main-container {
+     background-color: rgba(20, 29, 47, 1);
+     border-top: 4px solid rgb(112, 230, 28);
+     height: 291px;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+ }
+
+ .logo {
+     display: flex;
+     flex-direction: column;
+     font-weight: 700;
+     font-size: 70px;
+     color: white;
+     font-family: 'Poppins';
+     position: relative;
+
+
+     >a {
+         font-size: 16px;
+         font-weight: 400;
+         color: white;
+         font-family: 'Poppins';
+         text-decoration: none;
+         position: absolute;
+         bottom: 0;
+     }
+ }
+
+ .copyright {
+     font-family: 'Poppins';
+     font-weight: 400;
+     font-size: 23px;
+     color: white  ;
+
+ }
+ 
+ .icons {
+    display: flex;
+    gap: 40px;
+
+
+    >a {
+        transition: transform 125ms ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        >img {
+            width: 30px;
+            height: 30px;
+            background: none;
+        }
+    }
+}
+
+.purple{
+   color: rgba(151, 71, 255, 1);
+}
