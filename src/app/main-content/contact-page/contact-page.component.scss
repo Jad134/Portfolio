@@ -1,28 +1,30 @@
-.main-container{
-    background-color:  rgba(20, 29, 47, 1);
+.main-container {
+    background-color: rgba(20, 29, 47, 1);
     display: flex;
     flex-direction: column;
 }
 
-.content-container{
+.content-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-.left-side{
+.left-side {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 80px;
 }
 
-.headline{
+.headline {
     display: flex;
     align-items: center;
     gap: 50px;
-    >span{
+
+    >span {
         font-family: 'Poppins';
         font-weight: 700;
         font-size: 90px;
@@ -30,13 +32,13 @@
     }
 }
 
-.purple-line{
+.purple-line {
     height: 3px;
     width: 50px;
     background-color: rgba(151, 71, 255, 1);
 }
 
-.info-text{
+.info-text {
     display: flex;
     flex-direction: column;
     padding-left: 100px;
@@ -48,24 +50,25 @@
         font-weight: 700;
         font-size: 32px;
         color: white;
-      }
-    
-      span:nth-child(2) {
+    }
+
+    span:nth-child(2) {
         font-family: 'Poppins';
         font-weight: 400;
         font-size: 16px;
         color: white;
-      }
-    
-      span:nth-child(3) {
+    }
+
+    span:nth-child(3) {
         font-family: 'Poppins';
         font-weight: 400;
         font-size: 16px;
         color: white;
-      }
+    }
 }
 
-.right-side{
+.right-side {
+    position: relative;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -73,46 +76,92 @@
     align-items: center;
     gap: 50px;
 
-    >form{
+    >form {
         display: flex;
         flex-direction: column;
         gap: 32px;
         width: 617px;
 
-        >input{
+        >input {
             border: 1px solid rgba(151, 71, 255, 1);
             height: 50px;
             border-radius: 10px;
-            background-color:  rgba(20, 29, 47, 1);
+            background-color: rgba(20, 29, 47, 1);
             cursor: pointer;
             padding-inline: 20px;
+            color: white;
+            font-family: 'Poppins';
+            font-size: 16px;
 
-            &:hover{
-                border: 1px solid  rgb(112, 230, 28);
+            &:hover {
+                border: 1px solid rgba(28, 218, 230, 1);
             }
 
-            &::placeholder{
+            &:focus-visible{
+                border: 1px solid rgba(28, 218, 230, 1);
+                outline: none;
+            }
+
+            &:valid{
+                border: 1px solid rgba(112, 230, 28, 1);
+                background-image: url(/assets/img/icons/done.png);
+                background-repeat: no-repeat;
+                background-position: center right 10px;
+            }
+
+            &:invalid:focus{
+                border: 1px solid rgba(230, 28, 64, 1);
+                background-image: url(/assets/img/icons/error.png);
+                background-repeat: no-repeat;
+                background-position: center right 10px;
+            }
+
+            &::placeholder {
                 color: white;
                 font-family: 'Poppins';
                 font-size: 16px;
-                
+
             }
         }
 
-        >textarea{
+        >textarea {
             border: 1px solid rgba(151, 71, 255, 1);
             height: 150px;
             border-radius: 10px;
-            background-color:  rgba(20, 29, 47, 1);
+            background-color: rgba(20, 29, 47, 1);
             resize: none;
             cursor: pointer;
             padding-inline: 20px;
+            color: white;
+            font-family: 'Poppins';
+            font-size: 16px;
+            
 
-            &:hover{
-                border: 1px solid  rgb(112, 230, 28);
+            &:hover {
+                border: 1px solid rgba(28, 218, 230, 1);
             }
 
-            &::placeholder{
+            &:focus-visible{
+                border: 1px solid rgba(28, 218, 230, 1);
+                outline: none;
+            }
+
+            &:valid{
+                border: 1px solid rgba(112, 230, 28, 1);
+                background-image: url(/assets/img/icons/done.png);
+                background-repeat: no-repeat;
+                background-position:  right 10px top 10px;
+            }
+
+            &:invalid:focus{
+                border: 1px solid rgba(230, 28, 64, 1);
+                background-image: url(/assets/img/icons/error.png);
+                background-repeat: no-repeat;
+                background-position: right 10px top 10px;
+                
+            }
+
+            &::placeholder {
                 color: white;
                 font-family: 'Poppins';
                 font-size: 16px;
@@ -121,7 +170,26 @@
     }
 }
 
-.privacy{
+.sendButton{
+    width: 253px;
+    height: 58px;
+    font-family: 'Poppins';
+    font-size: 23px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(112, 230, 28, 1);
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.privacy {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -129,12 +197,13 @@
     font-weight: 400;
     font-size: 14px;
     color: white;
+    margin-bottom: 24px;
 
-    >a{
+    >a {
         text-decoration: none;
         color: rgba(151, 71, 255, 1);
 
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }

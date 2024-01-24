@@ -14,18 +14,19 @@
             </div>
         </div>
         <div class="right-side">
-            <form action="">
-                <input id="name-input" placeholder="Your name" type="text">
-                <input id="email-input" placeholder="Your email" type="text">
-                <textarea id="textarea" placeholder="Your message" name="" id="" cols="30" rows="10"></textarea>
+            <form autocomplete="off" (submit)="sendMail()" ngNativeValidate #myForm>
+                <input required id="name-input" placeholder="Your name" type="text" name="name" #nameField>
+                <input required id="email-input" placeholder="Your email" type="email" name="email" #mailField>
+                <textarea required id="textarea" placeholder="Your message" name="message" id="" cols="30" rows="10" #textField></textarea >
                 <div class="privacy"><img src="assets/img/icons/unchecked.png" alt=""> 
                     I've read the  <a href="">privacy policy</a> and agree to the processing of my data as outlined</div>
-            </form>
-            <div>
-                <button>Send Message</button>
+                    <button class="sendButton" #sendButton>Send Message</button>
+            </form> 
+            <div> 
+                
             </div>
         </div>
-
+ 
     </div>
 
 </div>
