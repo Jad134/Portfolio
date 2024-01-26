@@ -14,35 +14,8 @@
             </div>
         </div>
         <div class="right-side">
-            <form id="form" autocomplete="off" (submit)="sendMail()" ngNativeValidate #myForm novalidate>
-                <div class="input-areas">
-                    <input class="input" required id="name-input" placeholder="Your name" type="text" name="name" #nameField>
-                    <div #nameRequired class="required-message">Your name is required</div>
-                </div>
-                <div class="input-areas">
-                    <input class="input" required id="email-input" placeholder="Your email" type="email" name="email" #mailField>
-                    <div #mailRequired class="required-message">Your Email is required</div>
-                </div>
-                <div class="input-areas">
-                    <textarea class="textarea" required id="textarea" placeholder="Your message" name="message" id="" cols="30" rows="10"
-                        #textField></textarea>
-                    <div #textRequired class="required-message"> Your message is empty</div>
-                </div>
+            <app-contact-form></app-contact-form>
 
-
-                <div class="privacy">
-                    <div class="agreement">
-                        <img (click)="togglePrivacy()"
-                            [src]="privacyChecked ? 'assets/img/icons/checked.png' : 'assets/img/icons/unchecked.png'"
-                            alt="">
-                        I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
-                    </div>
-                    <div #infoField class="accept-info">Please accept the privacy policy</div>
-                </div>
-                <button disabled class="sendButton" #sendButton>Send Message <div (click)=" privacyWarning()"
-                        class="overlay"></div></button>
-
-            </form>
             <div>
 
             </div>
