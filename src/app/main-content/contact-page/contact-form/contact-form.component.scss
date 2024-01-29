@@ -133,7 +133,6 @@ form {
 .privacy {
     display: flex;
     flex-direction: column;
-    gap: 8px;
     font-family: 'Poppins';
     font-weight: 400;
     font-size: 14px;
@@ -163,7 +162,6 @@ form {
     margin-bottom: 60px;
     color: rgba(230, 28, 64, 1);
     visibility: hidden;
-
 }
 
 .overlay {

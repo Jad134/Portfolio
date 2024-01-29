@@ -22,8 +22,8 @@ export class ContactFormComponent {
   @ViewChild('textRequired') textRequired!: ElementRef;
 
   http = inject(HttpClient)
-
   privacyChecked: boolean = false;
+  mailValid: boolean = false;
 
   contactData = {
     name: '',
@@ -44,22 +44,21 @@ export class ContactFormComponent {
     },
   };
 
+
   onSubmit(ngForm: any) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) //ab hier könne der haken für die kontrolle rein
-    {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.mailValid){
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => { //Ab hier könnte noch rein, dass eine naricht kommt wenn mail versendet
             ngForm.resetForm();
-
-
-
+            this.mailValid = false;
           },
           error: (error) => {
             console.error(error);
+            alert('Mail konnte nicht versendet werden.')
           },
-          complete: () => console.info('send post complete'),
+          complete: () => alert('Mail wurde versendet') ,
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
@@ -67,17 +66,18 @@ export class ContactFormComponent {
     }
   }
 
+
   privacyWarning() {
     let infoField = this.infoField.nativeElement;
     let sendButton = this.sendButton.nativeElement;
-    console.log('ja es geht auch disabled')
-
+    
     if (sendButton.disabled == true) {
       infoField.style = 'visibility: visible; '
     } else {
       infoField.style = 'visibility: hidden; '
     }
   }
+
 
   togglePrivacy() {
     this.privacyChecked = !this.privacyChecked;
@@ -92,7 +92,8 @@ export class ContactFormComponent {
     }
   }
 
-  validateForm(): boolean {
+
+  validateForm() {
     let nameField = this.nameField.nativeElement;
     let mailField = this.mailField.nativeElement;
     let textField = this.textField.nativeElement;
@@ -100,76 +101,26 @@ export class ContactFormComponent {
     let mailRequired = this.mailRequired.nativeElement;
     let nameRequired = this.nameRequired.nativeElement;
 
-    let isValid = true;
 
     if (!nameField.value) {
       nameRequired.style = 'visibility: visible;';
-      isValid = false;
     }
-    else {
+    else { 
       nameRequired.style = 'visibility: hidden;';
     }
     if (!mailField.value) {
       mailRequired.style = 'visibility: visible;';
-      isValid = false;
     } else if (!mailField.value.includes('@')) {
-      mailRequired.style = 'visibility: visible;';
-      isValid = false;
+      mailRequired.style = 'visibility: visible;';   
     } else {
       mailRequired.style = 'visibility: hidden;';
+      this.mailValid = true;
     }
     if (!textField.value) {
       textRequired.style = 'visibility: visible;';
-      isValid = false;
     }
     else {
       textRequired.style = 'visibility: hidden;';
     }
-
-    return isValid;
-  }
-
-  async sendMail() {
-
-    console.log('sending mail', this.myForm);
-    let nameField = this.nameField.nativeElement;
-    let mailField = this.mailField.nativeElement;
-    let textField = this.textField.nativeElement;
-    let sendButton = this.sendButton.nativeElement;
-
-    if (this.validateForm()) {
-
-
-      nameField.disabled = true;
-      mailField.disabled = true;
-      textField.disabled = true;
-      sendButton.disabled = true;
-      // EVTL Animation
-      let fd = new FormData();
-      fd.append('name', nameField.value);
-      fd.append('email', mailField.value);
-      fd.append('message', textField.value)
-
-      //senden
-      await fetch('/send_mail.php',
-        {
-          method: 'POST',
-          body: fd
-        }
-
-      );
-
-      // Text anzeigen
-      nameField.disabled = false;
-      mailField.disabled = false;
-      textField.disabled = false;
-      sendButton.disabled = false;
-
-      nameField.value = '';
-      mailField.value = '';
-      textField.value = '';
-
-    }
-
   }
 }
