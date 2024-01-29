@@ -20,13 +20,27 @@
     font-size: 23px;
 
     >a {
+        position: relative;
         text-decoration: none;
         color: white;
         cursor: pointer;
         transition: all 125ms ease-in-out;
 
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            background-color: rgba(151, 71, 255, 1);
+            transition: width 0.3s ease-in-out;
+        }
+        
         &:hover {
             color: rgba(112, 230, 28, 1);
+            &::before {
+                width: 100%; 
+            }
         }
     }
 

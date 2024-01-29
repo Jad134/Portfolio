@@ -64,27 +64,29 @@
     align-items: center;
     margin-top: 100px;
 
-    >button {
-        background-color: rgba(112, 230, 28, 1);
-        color: white;
-        width: 165px;
-        height: 58px;
-        border-radius: 10px;
-        border: none;
-        cursor: pointer;
-        transition: 125ms ease-in;
-        font-family: 'Poppins';
-        font-size: 23px;
-        font-weight: 400;
-        z-index: 200;
-        position: relative;
-        top: 40px;
+    >a {
+        >button {
+            background-color: rgba(112, 230, 28, 1);
+            color: white;
+            width: 165px;
+            height: 58px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 125ms ease-in;
+            font-family: 'Poppins';
+            font-size: 23px;
+            font-weight: 400;
+            z-index: 200;
+            position: relative;
+            top: 40px;
 
-        &:hover {
-            background-color:
-                rgba(151, 71, 255, 1);
-            width: 175px;
-            height: 70px;
+            &:hover {
+                background-color:
+                    rgba(151, 71, 255, 1);
+                width: 175px;
+                height: 70px;
+            }
         }
     }
 }
