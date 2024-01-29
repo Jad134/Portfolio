@@ -9,6 +9,8 @@
 
 .left-side {
     width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 .right-side {
@@ -50,11 +52,11 @@
     display: flex;
     gap: 86px;
 
-    >button{
+    >button {
         cursor: pointer;
         transition: 125ms ease-in;
 
-        &:hover{
+        &:hover {
             background-color: rgba(112, 230, 28, 1);
         }
     }
@@ -83,4 +85,25 @@
     font-size: 23px;
     font-weight: 400;
     color: white;
+}
+
+.even-index {
+    flex-direction: row-reverse;
+}
+
+.odd-index {
+    flex-direction: row;
+}
+
+.scale-description {
+    display: flex;
+    align-items: end;
+}
+
+.no-scale-description {
+    display: flex;
+}
+
+.scale-button{
+    justify-content: end;
 }

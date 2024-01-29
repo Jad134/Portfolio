@@ -1,16 +1,14 @@
-<div class="project-first">
+<div *ngFor="let project of projects; let i = index" class="project-first" [ngClass]="{ 'even-index': isEven(i), 'odd-index': !isEven(i) }">
     <div class="left-side">
-        <img src="assets/img/projects/pollo-loco.png" alt="">
+        <img  [src]="project.imageUrl" alt="">
     </div>
     <div class="right-side">
-        <div class="description-container">
-            <span class="project-name">El-Pollo-Loco</span>
-            <span class="languages">JavaScript | HTML | CSS</span>
-            <span class="description">A simple Jump-and-Run game based on an object-oriented approach. Help El-Pollo-Loco to find coins
-                and
-                poison bottles to fight against the killer chicken.</span>
+        <div [ngClass]="{ 'scale-description': isEven(i), 'no-scale-description': !isEven(i) }" class="description-container">
+            <span  class="project-name">{{ project.projectName }}</span>
+            <span class="languages">{{ project.languages }}</span>
+            <span class="description">{{ project.projectDescription }}</span>
         </div>
-        <div class="buttons">
+        <div [ngClass]="{ 'scale-button': isEven(i) }" class="buttons">
             <button class="live-test-button">Live Test</button>
             <button class="github-button"> Github</button>
         </div>
