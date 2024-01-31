@@ -1,8 +1,8 @@
 <div *ngFor="let project of projects; let i = index" class="project-first" [ngClass]="{ 'even-index': isEven(i), 'odd-index': !isEven(i) }">
-    <div class="left-side">
+    <div class="left-side slide-in" [attr.data-direction]="isEven(i) ? 'right' : 'left'">
         <img  [src]="project.imageUrl" alt="">
     </div>
-    <div class="right-side">
+    <div class="right-side slide-in" [attr.data-direction]="isEven(i) ? 'left' : 'right'">
         <div [ngClass]="{ 'scale-description': isEven(i), 'no-scale-description': !isEven(i) }" class="description-container">
             <span  class="project-name">{{ project.projectName }}</span>
             <span class="languages">{{ project.languages }}</span>

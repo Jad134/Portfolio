@@ -43,3 +43,22 @@
     font-weight: 900;
     src: url('./assets/fonts/poppins-v20-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
+  .slide-in {
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .slide-in.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .slide-in-left {
+    transform: translateX(-50px);
+  }
+  
+  .slide-in-right {
+    transform: translateX(50px);
+  }
