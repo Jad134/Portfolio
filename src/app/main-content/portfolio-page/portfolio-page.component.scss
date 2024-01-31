@@ -2,6 +2,7 @@
     background-color: rgba(20, 29, 47, 1);
     padding-top: 80px;
     overflow: hidden;
+    position: relative;
 }
 
 .headline {
@@ -46,4 +47,15 @@
     padding-right: 80px;
     padding-inline: 200px;
     flex-direction: row-reverse;
+}
+
+.shadow{
+    position: absolute;
+    top: 800px
+}
+
+.shadow2{
+    position: absolute;
+    top: 1600px;
+    right: 0;
 }

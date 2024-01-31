@@ -4,6 +4,7 @@
      padding-left: 80px;
      padding-top: 200px;
      overflow:hidden;
+     position: relative;
  }
 
  .left-side {
@@ -12,6 +13,7 @@
      flex-direction: column;
      gap: 54px;
      position: relative;
+     z-index: 1;
 
      >img {
          position: absolute;
@@ -24,6 +26,7 @@
      display: flex;
      align-items: flex-start;
      gap: 123px;
+    
  }
 
  .icon-container {
@@ -50,6 +53,7 @@
          animation-timing-function: ease-in-out;
          animation-iteration-count: infinite;
          -webkit-animation-iteration-count: infinite;
+         
 
          &:hover {
              cursor: pointer;
@@ -140,4 +144,12 @@
          -ms-transform: translateY(-15px);
          transform: translateY(-15px)
      }
+ }
+
+ .shadow{
+    position: absolute;
+    left: 0;
+    height: 800px;
+    width: 150px;
+    top: 0;
  }
