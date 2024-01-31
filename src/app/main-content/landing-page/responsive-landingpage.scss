@@ -1,0 +1,46 @@
+@media(max-width: 1430px) {
+    .right-side {
+        position: absolute;
+        right: 48px;
+        background: none;
+        width: auto;
+
+        >a {
+            background: none;
+        }
+    }
+
+    .about-me {
+        background: none;
+    }
+
+    .introduction {
+        background: none;
+    }
+
+    .first-letter {
+        background: none;
+    }
+
+    .description {
+        background: none;
+
+        >h1 {
+            background: none;
+        }
+
+        >h2 {
+            background: none;
+        }
+    }
+}
+
+@media(max-width: 1260px) {
+    .about-me {
+        flex-direction: column;
+    }
+
+    .introduction{
+        transform: rotate(0) !important;
+    }
+}
