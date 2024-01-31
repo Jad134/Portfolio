@@ -15,6 +15,7 @@
      color: white;
      font-family: 'Poppins';
      position: relative;
+     cursor: pointer;
 
 
      >a {
@@ -25,6 +26,22 @@
          text-decoration: none;
          position: absolute;
          bottom: 0;
+
+         &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            background-color: rgba(151, 71, 255, 1);
+            transition: width 0.3s ease-in-out;
+        }
+        
+        &:hover {
+            &::before {
+                width: 100%; 
+            }
+        }
      }
  }
 
