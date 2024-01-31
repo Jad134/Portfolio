@@ -44,3 +44,70 @@
         transform: rotate(0) !important;
     }
 }
+
+@media(max-width: 1200px) {
+
+    .main-container{
+        flex-direction: column;
+    }
+    
+    .right-side{
+        position: unset;
+        margin-top: 0;
+        z-index: 101;
+        height: 400px;
+        >a{
+            >button{
+                position: unset;
+            }
+        }  
+    }
+
+    .description{
+        z-index: 101;
+    }
+
+    .shadow{
+        left: 10px;
+    }
+
+    .shadow2{
+        left: 50vh;
+        top: -80px;
+    }
+
+    .profile-pic{
+        left: 20vh;
+    }
+}
+
+@media(max-width: 950px) {
+    .shadow{
+        left: -136px;
+    }
+
+    .shadow2{
+        left: 30vh;
+        top: -80px;
+    }
+
+    .profile-pic{
+        left: 10vh;
+    }
+}
+
+
+@media(max-width: 730px) {
+    .shadow{
+        left: -245px;
+    }
+
+    .shadow2{
+        left: 11vh;
+        top: -18px;
+    }
+
+    .profile-pic{
+        left: -6vh;
+    }
+}
