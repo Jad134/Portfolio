@@ -199,9 +199,11 @@
     font-size: 23px;
     color: white;
     gap: 8px;
+    background: none;
 
 
     >img {
         transform: rotate(-90deg);
+        background: none;
     }
 }

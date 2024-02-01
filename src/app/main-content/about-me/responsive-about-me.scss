@@ -1,0 +1,78 @@
+@media (max-width: 1400px) {
+    .left-side {
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 1150px) {
+    .left-side {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .circle {
+        display: none;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .right-side {
+        position: absolute;
+        right: 0;
+
+        >img {
+            top: -140px;
+            width: 220px;
+        }
+    }
+
+    .left-side {
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+        z-index: 4;
+    }
+}
+
+@media (max-width: 550px) {
+   .headline{
+    >h2{
+        font-size: 75px
+    }
+   }
+
+   .bulp-information{
+    align-items: flex-start;
+   }
+
+   .puzzle-information{
+    align-items: flex-start;
+   }
+
+   .informations{
+    width: auto;
+   }
+}
+
+@media (max-width: 480px) {
+    .headline{
+     >h2{
+         font-size: 55px
+     }
+    }
+ }
+
+ @media (max-width: 400px) {
+    .headline{
+     >h2{
+         font-size: 45px
+     }
+    }
+    .left-side{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+ }
