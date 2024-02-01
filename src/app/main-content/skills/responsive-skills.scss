@@ -1,0 +1,138 @@
+@media (max-width:1400px) {
+    .purple-line{
+        width: 80px;
+    }
+}
+
+@media (max-width:1300px) {
+    .purple-line{
+        width: 390px;
+    }
+    .main-container{
+        flex-direction: column-reverse;
+    }
+
+    .right-side{
+        width:auto;
+        align-items:end;
+        padding-right: 400px;
+        gap: 0;
+
+        >a{
+            >button{
+                display: none;
+            }
+        }
+    }
+
+    .left-side{
+        width: auto;
+        align-items: center;
+        padding-right: 80px;
+        padding-top: 40px;
+    }
+
+    .icons{
+        gap: 200px;
+    }
+
+    .responsive-button{
+        >button{
+
+        
+        background-color: rgb(112, 230, 28);
+        color: white;
+        width: 200px;
+        height: 58px;
+        border: none;
+        border-radius: 10px;
+        font-family: 'Poppins';
+        font-size: 23px;
+        font-weight: 400;
+        transition: 125ms ease-in;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(151, 71, 255, 1);
+            width: 210px;
+            height: 70px;
+        }
+        }
+    }
+
+    .responsive-button-container{
+        height: 80px;
+    }
+}
+
+@media (max-width:1000px) {
+    .purple-line{
+        width: 245px;
+    }
+
+    .right-side{
+        padding-right: 300px;
+ 
+    }
+
+    .icons{
+        gap: 150px;
+    }
+}
+
+@media (max-width:850px) {
+    .purple-line{
+        width: 190px;
+    }
+
+    .right-side{
+        padding-right: 200px;
+ 
+    }
+
+    .icons{
+        gap: 150px;
+    }
+}
+
+@media (max-width:800px) {
+    .purple-line{
+        width: 190px;
+    }
+
+    .right-side{
+        padding-right: 200px;
+ 
+    }
+
+    .icons{
+        gap: 100px;
+    }
+}
+
+@media (max-width:750px) {
+    .purple-line{
+        width: 140px;
+    }
+
+    .right-side{
+        padding-right: 150px;
+ 
+    }
+
+    .icons{
+        gap: 100px;
+    }
+}
+
+@media (max-width:700px) {
+    
+
+    .left-side{
+        padding-right: 40px;
+ 
+    }
+
+    .main-container{
+        padding-left: 40px;
+    }
+}
