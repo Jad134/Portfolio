@@ -40,74 +40,234 @@
         flex-direction: column;
     }
 
-    .introduction{
+    .introduction {
         transform: rotate(0) !important;
     }
 }
 
 @media(max-width: 1200px) {
 
-    .main-container{
+    .main-container {
         flex-direction: column;
     }
-    
-    .right-side{
+
+    .right-side {
         position: unset;
         margin-top: 0;
         z-index: 101;
         height: 400px;
-        >a{
-            >button{
+
+        >a {
+            >button {
                 position: unset;
             }
-        }  
+        }
     }
 
-    .description{
+    .description {
         z-index: 101;
     }
 
-    .shadow{
+    .shadow {
         left: 10px;
     }
 
-    .shadow2{
+    .shadow2 {
         left: 50vh;
         top: -80px;
     }
 
-    .profile-pic{
+    .profile-pic {
         left: 20vh;
     }
 }
 
 @media(max-width: 950px) {
-    .shadow{
+    .shadow {
         left: -136px;
     }
 
-    .shadow2{
+    .shadow2 {
         left: 30vh;
         top: -80px;
     }
 
-    .profile-pic{
+    .profile-pic {
         left: 10vh;
+    }
+}
+
+@media(max-width: 830px) {
+    .scroll-info {
+        display: none;
     }
 }
 
 
 @media(max-width: 730px) {
-    .shadow{
+    .shadow {
         left: -245px;
     }
 
-    .shadow2{
+    .shadow2 {
         left: 11vh;
         top: -18px;
     }
 
-    .profile-pic{
+    .profile-pic {
         left: -6vh;
+    }
+}
+
+@media(max-width: 700px) {
+    .mail {
+        display: none;
+    }
+
+    .icons {
+        gap: 80px;
+    }
+
+    .about-me {
+        flex-direction: unset;
+    }
+
+    .introduction {
+        transform: rotate(-90deg) !important;
+        font-size: 45px
+    }
+
+    .description {
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+
+        >h1 {
+            font-size: 70px;
+        }
+
+        >h2 {
+            font-size: 45px;
+        }
+    }
+
+    .right-side {
+        height: 250px;
+    }
+}
+
+@media(max-width: 590px) {
+    .description {
+        gap: 0px;
+        position: relative;
+
+        >h1 {
+            font-size: 60px;
+        }
+
+        >h2 {
+            font-size: 39px;
+        }
+    }
+
+    .introduction {
+        transform: rotate(-90deg) !important;
+        font-size: 39px;
+        position: absolute;
+        left: -13px;
+    }
+
+    .profile-pic {
+        height: 600px;
+    }
+
+    .background {
+        top: 37vh;
+    }
+
+    .shadow2 {
+        height: 700px;
+    }
+}
+
+@media (max-width:500px) {
+    .right-side {
+        height: 140px;
+
+        >a {
+            >button {
+                width: 133px;
+                height: 49px;
+                font-size: 16px;
+
+                &:hover {
+                    width: 133px;
+                    height: 49px;
+                }
+            }
+        }
+
+    }
+
+    .profile-pic {
+        height: 500px;
+    }
+
+    .background {
+        top: 28vh;
+    }
+
+    .shadow2 {
+        height: 600px;
+    }
+
+    .description {
+        gap: 8px;
+
+        >h1 {
+            font-size: 45px;
+        }
+
+        >h2 {
+            font-size: 29px;
+        }
+    }
+
+    .introduction {
+        left: -50px;
+        font-size: 26px;
+    }
+
+    .about-me {
+        position: relative;
+    }
+
+    .icons{
+        gap: 42px;
+    }
+}
+
+
+@media (max-width:440px) {
+    .background{
+        width: auto;
+        top: 16vh;
+    }
+
+    .profile-pic{
+        height: 400px;
+    }
+
+    .shadow{
+        top: -32px;
+    }
+
+    .shadow2{
+        left: 0;
+        top: 20px;
+    }
+
+    .purple-line{
+        width: 64px;
     }
 }
