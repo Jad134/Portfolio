@@ -1,138 +1,209 @@
 @media (max-width:1400px) {
-    .purple-line{
+    .purple-line {
         width: 80px;
     }
 }
 
 @media (max-width:1300px) {
-    .purple-line{
+    .purple-line {
         width: 390px;
     }
-    .main-container{
+
+    .main-container {
         flex-direction: column-reverse;
     }
 
-    .right-side{
-        width:auto;
-        align-items:end;
+    .right-side {
+        width: 66%;
+        align-items: end;
         padding-right: 400px;
         gap: 0;
 
-        >a{
-            >button{
+        >a {
+            >button {
                 display: none;
             }
         }
     }
 
-    .left-side{
+    .left-side {
         width: auto;
         align-items: center;
         padding-right: 80px;
         padding-top: 40px;
+        padding-left: 80px;
     }
 
-    .icons{
+    .icons {
         gap: 200px;
     }
 
-    .responsive-button{
-        >button{
+    .responsive-button {
+        >button {
 
-        
-        background-color: rgb(112, 230, 28);
-        color: white;
-        width: 200px;
-        height: 58px;
-        border: none;
-        border-radius: 10px;
-        font-family: 'Poppins';
-        font-size: 23px;
-        font-weight: 400;
-        transition: 125ms ease-in;
-        cursor: pointer;
-        &:hover {
-            background-color: rgba(151, 71, 255, 1);
-            width: 210px;
-            height: 70px;
-        }
+
+            background-color: rgb(112, 230, 28);
+            color: white;
+            width: 200px;
+            height: 58px;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Poppins';
+            font-size: 23px;
+            font-weight: 400;
+            transition: 125ms ease-in;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(151, 71, 255, 1);
+                width: 210px;
+                height: 70px;
+            }
         }
     }
 
-    .responsive-button-container{
+    .responsive-button-container {
         height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
     }
 }
 
 @media (max-width:1000px) {
-    .purple-line{
+    .purple-line {
         width: 245px;
     }
 
-    .right-side{
+    .right-side {
         padding-right: 300px;
- 
+
     }
 
-    .icons{
+    .icons {
         gap: 150px;
     }
 }
 
 @media (max-width:850px) {
-    .purple-line{
+    .purple-line {
         width: 190px;
     }
 
-    .right-side{
+    .right-side {
         padding-right: 200px;
- 
+        width: auto;
+
     }
 
-    .icons{
+    .icons {
         gap: 150px;
     }
 }
 
 @media (max-width:800px) {
-    .purple-line{
+    .purple-line {
         width: 190px;
     }
 
-    .right-side{
+    .right-side {
         padding-right: 200px;
- 
+
     }
 
-    .icons{
+    .icons {
         gap: 100px;
     }
 }
 
 @media (max-width:750px) {
-    .purple-line{
+    .purple-line {
         width: 140px;
     }
 
-    .right-side{
+    .right-side {
         padding-right: 150px;
- 
+
     }
 
-    .icons{
+    .icons {
         gap: 100px;
     }
 }
 
 @media (max-width:700px) {
-    
 
-    .left-side{
+
+    .left-side {
         padding-right: 40px;
- 
+
     }
 
-    .main-container{
+    .main-container {
         padding-left: 40px;
+    }
+}
+
+@media (max-width:660px) {
+
+    .right-side {
+        padding-right: 100px;
+    }
+
+    .icons {
+        gap: 50px;
+    }
+
+    .purple-line{
+        width: 90px;
+    }
+
+}
+
+@media(max-width: 620px){
+    .headline{
+        font-size: 45px;
+    }
+
+    .right-side{
+        padding-right: 40px;
+    }
+
+    .purple-line{
+        width: 30px;
+    }
+
+    .icon-container{
+        >img{
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
+
+@media(max-width: 550px){
+    .main-container{
+        padding-left: 0px;
+    }
+    .left-side{
+        //padding-right: 10px;
+        padding-left: 10px;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 400px){
+    .main-container{
+        padding-left: 0px;
+    }
+    .left-side{
+        gap: 40px;
+    }
+}
+
+@media(max-width: 360px){
+    .right-side{
+        padding-left: 20px;
     }
 }
