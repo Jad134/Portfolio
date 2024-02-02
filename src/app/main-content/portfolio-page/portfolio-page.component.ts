@@ -6,7 +6,7 @@ import { ProjectsComponent } from './projects/projects.component';
   standalone: true,
   imports: [ProjectsComponent],
   templateUrl: './portfolio-page.component.html',
-  styleUrl: './portfolio-page.component.scss'
+  styleUrls: ['./portfolio-page.component.scss','./responsive-Portfolio.scss']
 })
 export class PortfolioPageComponent {
 

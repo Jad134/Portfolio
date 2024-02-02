@@ -1,0 +1,43 @@
+@media(max-width:1100px){
+    .shadow {
+        top: 1000px;
+        width: 700px;
+        height: 600px;
+        left: 75px;
+    }
+}
+
+@media(max-width: 570px){
+    .purple-line{
+        top: 30%;
+        width: 75vw;
+    }
+
+    .headline{
+        font-size: 45px;
+    }
+
+    .introduction{
+        width: 80%;
+    }
+
+    .shadow {
+        top: 758px;
+        width: 500px;
+        height: 400px;
+        left: 75px;
+    }
+
+    .shadow2{
+        height: 600px;
+    }
+}
+
+@media(max-width: 350px){
+    
+    .purple-line{
+        top: 25%;
+        width: 90vw;
+    }
+
+}
