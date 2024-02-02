@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule, ],
   templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.scss'
+  styleUrls: ['./contact-form.component.scss', './responsive-form.scss']
 })
 export class ContactFormComponent {
   @ViewChild('myForm') myForm!: ElementRef;

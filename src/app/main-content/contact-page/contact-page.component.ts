@@ -10,7 +10,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule, ContactFormComponent],
   templateUrl: './contact-page.component.html',
-  styleUrl: './contact-page.component.scss'
+  styleUrls: ['./contact-page.component.scss','./responsive-contact.scss']
 })
 export class ContactPageComponent {
 

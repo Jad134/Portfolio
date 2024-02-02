@@ -1,0 +1,25 @@
+@media (max-width: 1450px) {
+    form{
+        width: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .input{
+        width: 80%;
+    }
+    
+    .textarea{
+        width: 80%;
+    }
+}
+
+@media(max-width:850px){
+    .agreement{
+        flex-wrap: wrap;
+    }
+
+    .privacy{
+        width: 110%;
+    }
+}
