@@ -115,10 +115,11 @@
  .purple-line {
      height: 3px;
      background-color: rgba(151, 71, 255, 1);
-     width: 120px;
+     width: 245px;
      position: absolute;
      right: 0;
      border-radius: 10px;
+     overflow: hidden;
  }
 
 
