@@ -1,0 +1,14 @@
+
+@media(max-width: 500px) {
+    .links {
+
+        >a {
+            display: none;
+        }
+    }
+
+    .burger-menu{
+        display: flex;
+    }
+
+}

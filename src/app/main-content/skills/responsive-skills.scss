@@ -12,17 +12,18 @@
 
 @media (max-width:1300px) {
     .purple-line {
-        width: 390px;
+        width:  410px;
     }
 
     .main-container {
         flex-direction: column-reverse;
+        padding-left: 0;
     }
 
     .right-side {
         width: 66%;
         align-items: end;
-        padding-right: 400px;
+        padding-right: 437px;
         gap: 0;
 
         >a {
@@ -35,9 +36,11 @@
     .left-side {
         width: auto;
         align-items: center;
+        justify-content: center;
         padding-right: 80px;
         padding-top: 40px;
         padding-left: 80px;
+        padding-inline: 250px;
     }
 
     .icons {
@@ -89,6 +92,10 @@
 
     .icons {
         gap: 150px;
+    }
+
+    .left-side{
+        padding-inline: 0px;
     }
 }
 

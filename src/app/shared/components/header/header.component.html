@@ -1,8 +1,15 @@
 <div class="header">
-<div class="name">Ja <span>d</span> </div>
-<div class="links">
-    <a href="#about-me">About me</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
+    <div class="name">Ja <span>d</span> </div>
+    <div class="links">
+        <a href="#about-me">About me</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <img class="burger-menu" [src]="getIconSrc()" alt="" (click)="toggleDropdown()">
+    </div>
 </div>
-</div>
+<div class="dropdown-menu" [ngClass]="{'show': isDropdownOpen}">
+    <a (click)="toggleDropdown()" href="#about-me">About me</a>
+    <a (click)="toggleDropdown()" href="#skills">Skills</a>
+    <a (click)="toggleDropdown()" href="#portfolio">Portfolio</a>
+    <a (click)="toggleDropdown()" href="#portfolio">Contact</a>
+  </div>

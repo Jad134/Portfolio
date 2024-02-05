@@ -58,3 +58,56 @@
         color: rgba(151, 71, 255, 1)
     }
 }
+
+.burger-menu{
+    height: 30px;
+    width: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    transform: translateX(100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 29, 47, 0.8);
+    color: white;
+    z-index: 800;
+    transition: transform 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+
+    >a{
+        position: relative;
+        font-size: 23px;
+        color: white;
+        font-family: 'Poppins';
+        text-decoration: none;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            background-color: rgba(151, 71, 255, 1);
+            transition: width 0.3s ease-in-out;
+        }
+        
+        &:hover {
+            color: rgba(112, 230, 28, 1);
+            &::before {
+                width: 100%; 
+            }
+        }
+    }
+  }
+  
+  .dropdown-menu.show {
+    transform: translateX(0);
+  }
