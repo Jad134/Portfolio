@@ -9,8 +9,8 @@
             <span class="description">{{ project.projectDescription }}</span>
         </div>
         <div [ngClass]="{ 'scale-button': isEven(i) }" class="buttons">
-            <button class="live-test-button">Live Test</button>
-            <button class="github-button"> Github</button>
+            <a target="_blank" class="project-link" href={{project.projectLink}}><button class="live-test-button">Live Test</button></a>
+            <a target="_blank" class="github-link" href={{project.githubLink}}><button class="github-button"> Github</button></a>                 
         </div>
     </div>
 </div>
