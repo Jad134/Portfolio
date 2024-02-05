@@ -1,0 +1,38 @@
+@media (max-width: 600px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        >a {
+            display: none;
+        }
+    }
+
+    .mobile-impressum {
+        display: flex;
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+        font-family: 'Poppins';
+        text-decoration: none;
+        position: relative;
+        bottom: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            background-color: rgba(151, 71, 255, 1);
+            transition: width 0.3s ease-in-out;
+        }
+
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+}

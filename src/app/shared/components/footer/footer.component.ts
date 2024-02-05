@@ -5,7 +5,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrls: ['./footer.component.scss', './responsive-footer.scss']
 })
 export class FooterComponent {
   @ViewChild('scrollContainer', { read: ElementRef }) scrollContainer!: ElementRef<HTMLElement>;
