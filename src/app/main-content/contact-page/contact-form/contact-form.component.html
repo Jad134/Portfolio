@@ -1,4 +1,4 @@
-<form  id="form" autocomplete="off" (ngSubmit)="onSubmit(contactForm)" ngNativeValidate #contactForm="ngForm" novalidate>
+<form id="form" autocomplete="off" (ngSubmit)="onSubmit(contactForm)" ngNativeValidate #contactForm="ngForm" novalidate>
     <div class="input-areas">
         <input class="input" [(ngModel)]="contactData.name" required id="name" placeholder="Your name" type="text"
             name="name" #nameField>
@@ -8,29 +8,22 @@
         <input class="input" [(ngModel)]="contactData.email" required id="email" placeholder="Your email" type="email"
             name="email" #mailField>
         <div #mailRequired class="required-message">Your Email is required</div>
-        
-        
     </div>
     <div class="input-areas">
-        <textarea   class="textarea" [(ngModel)]="contactData.message"
-             id="message" required id="textarea" placeholder="Your message" name="message" cols="30" rows="10"
-            #textField></textarea>
+        <textarea class="textarea" [(ngModel)]="contactData.message" id="message" required id="textarea"
+            placeholder="Your message" name="message" cols="30" rows="10" #textField></textarea>
         <div #textRequired class="required-message"> Your message is empty</div>
         <div class="privacy">
             <div class="agreement">
                 <img (click)="togglePrivacy()"
                     [src]="privacyChecked ? 'assets/img/icons/checked.png' : 'assets/img/icons/unchecked.png'" alt="">
-                I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
+                I've read the <a target="_blank" href="privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.
             </div>
             <div #infoField class="accept-info">Please accept the privacy policy</div>
         </div>
     </div>
-
-
-
-    <button  (click)="validateForm()" disabled class="sendButton" #sendButton>Send Message
+    <button (click)="validateForm()" disabled class="sendButton" #sendButton>Send Message
         <div (click)=" privacyWarning()" class="overlay">
         </div>
     </button>
-
 </form>

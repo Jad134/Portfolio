@@ -1,6 +1,5 @@
 * {
     background-color: rgba(20, 29, 47, 1);
-
 }
 
 .main-container {
@@ -17,7 +16,6 @@
     top: 42vh;
     z-index: 100;
     background: none;
-
 }
 
 .picture {
@@ -49,7 +47,6 @@
     position: relative;
 }
 
-
 .profile-pic {
     position: relative;
     background: none;
@@ -64,7 +61,6 @@
     align-items: center;
     margin-top: 100px;
     
-
     >a {
         >button {
             background-color: rgba(112, 230, 28, 1);
@@ -98,7 +94,6 @@
     height: fit-content;
     align-items: center;
     justify-content: center;
-
 }
 
 .introduction {
@@ -109,7 +104,6 @@
     transform: rotate(-90deg) !important;
     height: fit-content;
     padding-right: 11px;
-
 
     .first-letter {
         display: inline-block;
@@ -137,7 +131,6 @@
         margin-block-start: 0;
         margin-block-end: 0;
     }
-
 }
 
 .links {
@@ -163,7 +156,6 @@
 .icons {
     display: flex;
     gap: 40px;
-
 
     >a {
         transition: transform 125ms ease;
@@ -200,7 +192,6 @@
     color: white;
     gap: 8px;
     background: none;
-
 
     >img {
         transform: rotate(-90deg);

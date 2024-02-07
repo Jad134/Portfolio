@@ -13,18 +13,5 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   styleUrls: ['./contact-page.component.scss','./responsive-contact.scss']
 })
 export class ContactPageComponent {
-
-  constructor() {
-
-  }
-
-  @ViewChild('myForm') myForm!: ElementRef;
-  @ViewChild('nameField') nameField!: ElementRef;
-  @ViewChild('mailField') mailField!: ElementRef;
-  @ViewChild('textField') textField!: ElementRef;
-  @ViewChild('sendButton') sendButton!: ElementRef;
-  @ViewChild('infoField') infoField!: ElementRef;
-  @ViewChild('nameRequired') nameRequired!: ElementRef;
-  @ViewChild('mailRequired') mailRequired!: ElementRef;
-  @ViewChild('textRequired') textRequired!: ElementRef;
+  
 }

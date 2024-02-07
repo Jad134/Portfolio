@@ -10,7 +10,11 @@ import { CommonModule } from '@angular/common';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss','./responsive-project.scss']
 })
+
+
 export class ProjectsComponent {
+
+
   projects = [
     {
       imageUrl: 'assets/img/projects/join.png',
@@ -45,6 +49,8 @@ export class ProjectsComponent {
       projectLink: 'http://jad-el-nader.developerakademie.net/Join/index.html'
     },
   ];
+
+  
   isEven(index: number): boolean {
     return index % 2 === 0;
   }
