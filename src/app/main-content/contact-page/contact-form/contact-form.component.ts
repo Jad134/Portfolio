@@ -1,17 +1,19 @@
-import { Component, ViewChild, ElementRef, inject } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, ViewChild, ElementRef, inject, HostListener } from '@angular/core';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, ],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss', './responsive-form.scss']
 })
+
+
 export class ContactFormComponent {
-  @ViewChild('myForm') myForm!: ElementRef;
+  @ViewChild('contactForm') contactForm!: NgForm;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('mailField') mailField!: ElementRef;
   @ViewChild('textField') textField!: ElementRef;
@@ -21,9 +23,12 @@ export class ContactFormComponent {
   @ViewChild('mailRequired') mailRequired!: ElementRef;
   @ViewChild('textRequired') textRequired!: ElementRef;
 
+
   http = inject(HttpClient)
   privacyChecked: boolean = false;
   mailValid: boolean = false;
+  mailTest = false;
+
 
   contactData = {
     name: '',
@@ -31,7 +36,13 @@ export class ContactFormComponent {
     message: '',
   };
 
-  mailTest = false;
+
+@HostListener('document:keydown.enter', ['$event'])
+  handleEnterPress(event: KeyboardEvent) {
+    event.preventDefault(); 
+    this.onEnterPress();
+  }
+
 
   post = {
     endPoint: 'https:jad-portfolio.de/sendMail.php', // Auf dem Server oder vor dem Hochladen nur /sendMail.php
@@ -46,11 +57,11 @@ export class ContactFormComponent {
 
 
   onSubmit(ngForm: any) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.mailValid){
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.mailValid) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response) => { //Ab hier könnte noch rein, dass eine naricht kommt wenn mail versendet
+          next: (response) => { 
             ngForm.resetForm();
             this.mailValid = false;
           },
@@ -58,7 +69,7 @@ export class ContactFormComponent {
             console.error(error);
             alert('Mail konnte nicht versendet werden.')
           },
-          complete: () => alert('Mail wurde versendet') ,
+          complete: () => alert('Mail wurde versendet'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
@@ -70,7 +81,7 @@ export class ContactFormComponent {
   privacyWarning() {
     let infoField = this.infoField.nativeElement;
     let sendButton = this.sendButton.nativeElement;
-    
+
     if (sendButton.disabled == true) {
       infoField.style = 'visibility: visible; '
     } else {
@@ -93,34 +104,44 @@ export class ContactFormComponent {
   }
 
 
-  validateForm() {
-    let nameField = this.nameField.nativeElement;
-    let mailField = this.mailField.nativeElement;
-    let textField = this.textField.nativeElement;
-    let textRequired = this.textRequired.nativeElement;
-    let mailRequired = this.mailRequired.nativeElement;
-    let nameRequired = this.nameRequired.nativeElement;
+ validateName(name: string): boolean {
+  return !!name; 
+}
 
 
-    if (!nameField.value) {
-      nameRequired.style = 'visibility: visible;';
-    }
-    else { 
-      nameRequired.style = 'visibility: hidden;';
-    }
-    if (!mailField.value) {
-      mailRequired.style = 'visibility: visible;';
-    } else if (!mailField.value.includes('@')) {
-      mailRequired.style = 'visibility: visible;';   
-    } else {
-      mailRequired.style = 'visibility: hidden;';
-      this.mailValid = true;
-    }
-    if (!textField.value) {
-      textRequired.style = 'visibility: visible;';
-    }
-    else {
-      textRequired.style = 'visibility: hidden;';
+validateEmail(email: string): boolean {
+  return !!email && email.includes('@'); 
+}
+
+
+validateMessage(message: string): boolean {
+  return !!message; 
+}
+
+
+showErrorMessage(element: ElementRef, show: boolean): void {
+  element.nativeElement.style.visibility = show ? 'visible' : 'hidden'; 
+}
+
+
+validateForm() {
+  const nameValid = this.validateName(this.contactData.name);
+  const emailValid = this.validateEmail(this.contactData.email);
+  const messageValid = this.validateMessage(this.contactData.message);
+
+  this.showErrorMessage(this.nameRequired, !nameValid);
+  this.showErrorMessage(this.mailRequired, !emailValid);
+  this.showErrorMessage(this.textRequired, !messageValid);
+
+  this.mailValid = emailValid; 
+}
+
+
+  onEnterPress() {
+    this.privacyWarning()
+    this.validateForm()
+    if (this.contactForm.valid) { 
+      this.contactForm.onSubmit(new Event('submit')); 
     }
   }
 }
