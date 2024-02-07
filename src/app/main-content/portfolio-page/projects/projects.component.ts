@@ -20,7 +20,7 @@ export class ProjectsComponent {
       imageUrl: 'assets/img/projects/join.png',
       projectName: 'Join',
       languages: 'JavaScript | HTML | CSS',
-      projectDescription: 'A simple Jump-and-Run game based on an object-oriented approach. Help El-Pollo-Loco to find coins and poison bottles to fight against the killer chicken.',
+      projectDescription: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       githubLink: 'https://github.com/Jad134/Join',
       projectLink: 'http://jad-el-nader.developerakademie.net/Join/index.html'
     },
@@ -36,13 +36,13 @@ export class ProjectsComponent {
       imageUrl: 'assets/img/projects/pokedex.png',
       projectName: 'Pokedex',
       languages: 'API | JavaScript | HTML | CSS',
-      projectDescription: 'Description of another project.',
+      projectDescription: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       githubLink: 'https://github.com/Jad134/PokeDex',
       projectLink: 'http://jad-el-nader.developerakademie.net/JS/Pokedex/index.html'
     },
     {
       imageUrl: 'assets/img/projects/pokedex.png',
-      projectName: 'Pokedex',
+      projectName: 'Another Project',
       languages: 'API | JavaScript | HTML | CSS',
       projectDescription: 'Description of another project.',
       githubLink: 'https://github.com/Jad134/Join',
@@ -50,7 +50,7 @@ export class ProjectsComponent {
     },
   ];
 
-  
+
   isEven(index: number): boolean {
     return index % 2 === 0;
   }
