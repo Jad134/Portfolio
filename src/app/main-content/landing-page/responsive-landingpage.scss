@@ -1,3 +1,14 @@
+
+@media (min-height: 1100px) {
+    .main-container {
+        height: 100vh;
+    }
+
+    .background {
+        top: 27vh;
+    }
+}
+
 @media(max-width: 1430px) {
     .right-side {
         position: absolute;
@@ -78,6 +89,11 @@
 
     .profile-pic {
         left: 20vh;
+    }
+
+    .links {
+        position: relative;
+        width: auto;
     }
 }
 
@@ -243,6 +259,10 @@
     .icons {
         gap: 42px;
     }
+
+    .links{
+        padding-top: 24px;
+    }
 }
 
 @media (max-width:440px) {
@@ -285,11 +305,12 @@
         font-size: 22px;
     }
 
-    .description{
-        >h1{
+    .description {
+        >h1 {
             font-size: 41px;
         }
-        >h2{
+
+        >h2 {
             font-size: 25px;
             text-align: center;
         }
@@ -297,8 +318,8 @@
 }
 
 @media (max-height:520px) {
-    .profile-pic{
+    .profile-pic {
         height: 343px;
     }
-    
+
 }

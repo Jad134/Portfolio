@@ -45,7 +45,7 @@ export class ContactFormComponent {
 
 
   post = {
-    endPoint: 'https:jad-portfolio.de/sendMail.php', // Auf dem Server oder vor dem Hochladen nur /sendMail.php
+    endPoint: '/sendMail.php', 
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
