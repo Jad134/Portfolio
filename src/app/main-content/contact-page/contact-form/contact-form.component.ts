@@ -45,7 +45,7 @@ export class ContactFormComponent {
 
 
   post = {
-    endPoint: '/sendMail.php', 
+    endPoint: 'https:jad-portfolio.de/sendMail.php', // Auf dem Server oder vor dem Hochladen nur /sendMail.php
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -110,7 +110,8 @@ export class ContactFormComponent {
 
 
 validateEmail(email: string): boolean {
-  return !!email && email.includes('@'); 
+  let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return !!email && email.includes('@') && emailPattern.test(email); 
 }
 
 

@@ -5,7 +5,7 @@
         <div #nameRequired class="required-message">Your name is required</div>
     </div>
     <div class="input-areas">
-        <input class="input" [(ngModel)]="contactData.email" required id="email" placeholder="Your email" type="email"
+        <input class="input" [(ngModel)]="contactData.email" required id="email" placeholder="Your email" type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             name="email" #mailField>
         <div #mailRequired class="required-message">Your Email is required</div>
     </div>
