@@ -62,3 +62,17 @@
   .slide-in-right {
     transform: translateX(50px);
   }
+
+  ::-webkit-scrollbar{
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background-color: rgb(151, 71, 255);
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background-color: rgba(20, 29, 47, 1);
+    
+  }
