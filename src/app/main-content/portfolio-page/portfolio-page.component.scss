@@ -61,3 +61,16 @@
     right: 0;
 }
 
+//----------------------responisve ab hier---------
+
+.test{
+    background-color: rgb(20, 29, 47);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    overflow: hidden;
+}
+
