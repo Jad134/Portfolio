@@ -13,17 +13,12 @@
 @media (max-width:1600px) {
     .project-first {
         display: flex;
-        //justify-content: center;
         align-items: center;
         padding-left: 80px;
         padding-right: 80px;
         padding-inline: 0;
     }
 
-    .right-side {
-        // padding-left: 80px;
-        // padding-right: 80px;
-    }
 }
 
 @media (max-width:1300px) {
@@ -120,6 +115,4 @@
     .live-test-button{
         width: 130px;
     }
-
-   
 }

@@ -1,11 +1,23 @@
-//  .main-container {
-//      background-color: rgba(20, 29, 47, 1);
-//      display: flex;
-//      padding-left: 80px;
-//      padding-top: 200px;
-//      overflow:hidden;
-//      position: relative;
-//  }
+.first-container{
+    background-color: rgb(20, 29, 47);
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+ }
+
+.main-container {
+    background-color: rgb(20, 29, 47);
+    display: flex;
+    /* padding-left: 80px; */
+    padding-top: 200px;
+    overflow: hidden;
+    position: relative;
+    max-width: 1920px;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 80px;
+    min-height: 411px;  
+}
 
  .left-side {
      width: 40%;
@@ -23,6 +35,17 @@
          top: 70px;
      }
  }
+
+ .purple-line {
+    height: 3px;
+    background-color: rgb(151, 71, 255);
+    width: 100px;
+    position: absolute;
+    right: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    top: 45%;
+}
 
  .icons {
      display: flex;
@@ -114,17 +137,6 @@
      text-align: right;
  }
 
-//  .purple-line {
-//      height: 3px;
-//      background-color: rgba(151, 71, 255, 1);
-//      width: 245px;
-//      position: absolute;
-//      right: 0;
-//      border-radius: 10px;
-//      overflow: hidden;
-//  }
-
-
  @keyframes bounce {
 
      0%,
@@ -162,38 +174,11 @@
     display: none;
  }
 
- //------------------------New for responsive-----------------------
+ 
 
- .test{
-    background-color: rgb(20, 29, 47);
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
- }
+ 
 
- .main-container {
-    background-color: rgb(20, 29, 47);
-    display: flex;
-    /* padding-left: 80px; */
-    padding-top: 200px;
-    overflow: hidden;
-    position: relative;
-    max-width: 1920px;
-    justify-content: space-between;
-    margin-left: 80px;
-    margin-right: 80px;
-    min-height: 411px;
-    
-}
+ 
 
-.purple-line {
-    height: 3px;
-    background-color: rgb(151, 71, 255);
-    width: 100px;
-    position: absolute;
-    right: 0;
-    border-radius: 10px;
-    overflow: hidden;
-    top: 45%;
-}
+
  
