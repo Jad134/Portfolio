@@ -1,3 +1,14 @@
+@media (min-width: 1930px) {
+    .main-container{
+        max-width: 1920px;
+    }
+
+    .shadow{
+        height: 900px;
+        left: 0;
+    }
+}
+
 @media (max-width: 1450px) {
     .right-side {
         width: 70%;
@@ -68,7 +79,7 @@
     .shadow {
         position: absolute;
         bottom: -370px;
-        height: 700px;
+        height: 800px;
     }
 }
 
@@ -111,6 +122,6 @@
     .shadow {
         position: absolute;
         bottom: -150px;
-        height: 400px;
+        height: 600px;
     }
 }
