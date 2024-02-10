@@ -3,6 +3,7 @@
     padding-top: 40px;
     display: flex;
     overflow: hidden;
+    max-width: 1920px;
 }
 
 .left-side {
@@ -98,3 +99,18 @@
     width: 100%;
     /* Zentriere die Linie am oberen Rand des .right-side-Containers */
 }
+
+
+//----------------------Test für widescreeen ab hier-------------------------
+
+.test {
+    background-color: rgb(20, 29, 47);
+    display: flex;
+    justify-content: center;
+}
+
+.background-purple {
+    position: absolute;
+    right: 0;
+}
+
