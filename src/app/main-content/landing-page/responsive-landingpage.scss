@@ -3,10 +3,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100vh;
     }
 
     .main-container {
         max-width: 1920px;
+        
     }
 
     .profile-pic {
@@ -23,7 +25,7 @@
 
     .background-widescreen {
         position: absolute;
-        width: 100vw;
+        width: 100%;
         height: 700px;
         top: 39%;
         z-index: 100;
@@ -37,7 +39,7 @@
 
     .links {
         width: 1920px;
-        position: absolute;
+        padding-top: 100px;
     }
 
     .scroll-info{
@@ -46,9 +48,9 @@
 }
 
 @media (min-height: 1100px) {
-    .main-container {
-        height: 100vh;
-    }
+    // .main-container {
+    //     height: 100vh;
+    // }
 
     .background {
         top: 27vh;
@@ -68,6 +70,12 @@
 @media (min-height: 1400px) {
     .background-widescreen {
         top: 31vh;
+    }
+}
+
+@media (min-height: 2000px) {
+    .background-widescreen {
+        top: 20vh;
     }
 }
 
@@ -162,6 +170,11 @@
     .links {
         position: relative;
         width: auto;
+       
+    }
+
+    .wide-screen-align{
+        height: auto;
     }
 }
 
@@ -329,7 +342,7 @@
     }
 
     .links {
-        padding-top: 24px;
+        padding-top: 50px;
     }
 }
 

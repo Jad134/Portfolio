@@ -61,7 +61,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
-    
+
     >a {
         >button {
             background-color: rgba(112, 230, 28, 1);
@@ -145,6 +145,9 @@
     bottom: 0;
     z-index: 200;
     width: 97vw;
+    position: relative;
+    background: none;
+
 }
 
 .purple-line {
@@ -180,6 +183,7 @@
     font-weight: 400;
     font-size: 23px;
     color: white;
+    background: none;
 }
 
 .scroll-info {
@@ -195,6 +199,7 @@
     color: white;
     gap: 8px;
     background: none;
+    bottom: 100px;
 
     >img {
         transform: rotate(-90deg);
@@ -202,6 +207,10 @@
     }
 }
 
-.background-widescreen{
+.background-widescreen {
     display: none;
+}
+
+.wide-screen-align{
+    height: 100vh;
 }
