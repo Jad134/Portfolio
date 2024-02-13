@@ -1,12 +1,13 @@
-import { Component, ViewChild, ElementRef, inject, HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef, inject, HostListener, Input } from '@angular/core';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { ContactPageComponent } from '../contact-page.component';
 
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, ContactPageComponent],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss', './responsive-form.scss']
 })
@@ -24,10 +25,18 @@ export class ContactFormComponent {
   @ViewChild('textRequired') textRequired!: ElementRef;
 
 
+
+  constructor() {
+
+  }
+
+  contactPage = ContactPageComponent;
+
   http = inject(HttpClient)
   privacyChecked: boolean = false;
   mailValid: boolean = false;
   mailTest = false;
+  succesMail = inject(ContactPageComponent)
 
 
   contactData = {
@@ -37,9 +46,9 @@ export class ContactFormComponent {
   };
 
 
-@HostListener('document:keydown.enter', ['$event'])
+  @HostListener('document:keydown.enter', ['$event'])
   handleEnterPress(event: KeyboardEvent) {
-    event.preventDefault(); 
+    event.preventDefault();
     this.onEnterPress();
   }
 
@@ -61,7 +70,7 @@ export class ContactFormComponent {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response) => { 
+          next: (response) => {
             ngForm.resetForm();
             this.mailValid = false;
           },
@@ -69,7 +78,7 @@ export class ContactFormComponent {
             console.error(error);
             alert('Mail konnte nicht versendet werden.')
           },
-          complete: () => alert('Mail wurde versendet'),
+          complete: () => this.showSuccesMailSend(),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
@@ -104,45 +113,53 @@ export class ContactFormComponent {
   }
 
 
- validateName(name: string): boolean {
-  return !!name; 
-}
+  validateName(name: string): boolean {
+    return !!name;
+  }
 
 
-validateEmail(email: string): boolean {
-  let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return !!email && email.includes('@') && emailPattern.test(email); 
-}
+  validateEmail(email: string): boolean {
+    let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return !!email && email.includes('@') && emailPattern.test(email);
+  }
 
 
-validateMessage(message: string): boolean {
-  return !!message; 
-}
+  validateMessage(message: string): boolean {
+    return !!message;
+  }
 
 
-showErrorMessage(element: ElementRef, show: boolean): void {
-  element.nativeElement.style.visibility = show ? 'visible' : 'hidden'; 
-}
+  showErrorMessage(element: ElementRef, show: boolean): void {
+    element.nativeElement.style.visibility = show ? 'visible' : 'hidden';
+  }
 
 
-validateForm() {
-  const nameValid = this.validateName(this.contactData.name);
-  const emailValid = this.validateEmail(this.contactData.email);
-  const messageValid = this.validateMessage(this.contactData.message);
+  validateForm() {
+    const nameValid = this.validateName(this.contactData.name);
+    const emailValid = this.validateEmail(this.contactData.email);
+    const messageValid = this.validateMessage(this.contactData.message);
 
-  this.showErrorMessage(this.nameRequired, !nameValid);
-  this.showErrorMessage(this.mailRequired, !emailValid);
-  this.showErrorMessage(this.textRequired, !messageValid);
+    this.showErrorMessage(this.nameRequired, !nameValid);
+    this.showErrorMessage(this.mailRequired, !emailValid);
+    this.showErrorMessage(this.textRequired, !messageValid);
 
-  this.mailValid = emailValid; 
-}
+    this.mailValid = emailValid;
+  }
 
 
   onEnterPress() {
     this.privacyWarning()
     this.validateForm()
-    if (this.contactForm.valid) { 
-      this.contactForm.onSubmit(new Event('submit')); 
+    if (this.contactForm.valid) {
+      this.contactForm.onSubmit(new Event('submit'));
     }
   }
+
+
+  showSuccesMailSend() {
+    let mailSucces = this.succesMail.mailSucces.nativeElement
+
+    mailSucces.style.visibility = 'visible'
+  }
+
 }

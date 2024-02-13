@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, Input } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { send } from 'process';
@@ -13,5 +13,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   styleUrls: ['./contact-page.component.scss','./responsive-contact.scss']
 })
 export class ContactPageComponent {
-  
+  @ViewChild('mailSucces') mailSucces!: ElementRef;
+
+ 
 }
