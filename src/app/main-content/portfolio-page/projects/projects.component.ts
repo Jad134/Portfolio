@@ -1,18 +1,26 @@
 import { Component, Input } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ CommonModule],
+  imports: [ CommonModule, TranslateModule, ],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss','./responsive-project.scss']
 })
 
 
 export class ProjectsComponent {
+  constructor(private translate: TranslateService) {}
+
+
+  getProjectDescription(translationKey: string) {
+    return this.translate.instant(translationKey);
+  }
 
 
   projects = [
@@ -20,7 +28,7 @@ export class ProjectsComponent {
       imageUrl: 'assets/img/projects/join.png',
       projectName: 'Join',
       languages: 'JavaScript | HTML | CSS',
-      projectDescription: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      projectDescription: 'joinDescription',
       githubLink: 'https://github.com/Jad134/Join',
       projectLink: 'http://jad-el-nader.developerakademie.net/Join/index.html'
     },
@@ -28,7 +36,7 @@ export class ProjectsComponent {
       imageUrl: 'assets/img/projects/pollo-loco.png',
       projectName: 'El-Pollo-Loco',
       languages: 'JavaScript | HTML | CSS',
-      projectDescription: 'A simple Jump-and-Run game based on an object-oriented approach. Help El-Pollo-Loco to find coins and poison bottles to fight against the killer chicken.',
+      projectDescription: 'polloLocoDecscription',
       githubLink: 'https://github.com/Jad134/EL-Pollo-Loco',
       projectLink: 'http://jad-el-nader.developerakademie.net/Pollo%20Loco/index.html'
     },
@@ -36,7 +44,7 @@ export class ProjectsComponent {
       imageUrl: 'assets/img/projects/pokedex.png',
       projectName: 'Pokedex',
       languages: 'API | JavaScript | HTML | CSS',
-      projectDescription: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      projectDescription: 'pokedexDescription',
       githubLink: 'https://github.com/Jad134/PokeDex',
       projectLink: 'http://jad-el-nader.developerakademie.net/JS/Pokedex/index.html'
     },
@@ -44,7 +52,7 @@ export class ProjectsComponent {
       imageUrl: 'assets/img/projects/pokedex.png',
       projectName: 'Another Project',
       languages: 'API | JavaScript | HTML | CSS',
-      projectDescription: 'Description of another project.',
+      projectDescription: 'anotherProject',
       githubLink: 'https://github.com/Jad134/Join',
       projectLink: 'http://jad-el-nader.developerakademie.net/Join/index.html'
     },

@@ -6,6 +6,11 @@
     "puzzle": "I am deeply convinced that the combination of technical brilliance and a strong focus on user needs can lead to truly impressive results. For me, this means ensuring not only that the technical aspects of a project are robust and efficient, but also that they seamlessly match the needs and preferences of the end users.",
     "mySkills": "My Skills",
     "skillText": "I have gained experience in building projects with various <br> front end technologies and concepts.",
-    "getInTouch": "Get in touch"
-
-  }
+    "getInTouch": "Get in touch",
+    "portfolioIntroduction": "This page is a sample of my work - please feel free to try them out.",
+    "joinDescription": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "polloLocoDecscription": "A simple Jump-and-Run game based on an object-oriented approach. Help El-Pollo-Loco to find coins and poison bottles to fight against the killer chicken.",
+    "pokedexDescription":"Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
+    "anotherProject": "Description of another project"
+    
+}

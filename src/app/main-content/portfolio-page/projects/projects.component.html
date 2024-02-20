@@ -6,7 +6,7 @@
         <div [ngClass]="{ 'scale-description': isEven(i), 'no-scale-description': !isEven(i) }" class="description-container">
             <span  class="project-name">{{ project.projectName }}</span>
             <span class="languages">{{ project.languages }}</span>
-            <span class="description">{{ project.projectDescription }}</span>
+            <span class="description">{{ getProjectDescription(project.projectDescription) }}</span>
         </div>
         <div [ngClass]="{ 'scale-button': isEven(i) }" class="buttons">
             <a target="_blank" class="project-link" href={{project.projectLink}}><button class="live-test-button">Live Test</button></a>

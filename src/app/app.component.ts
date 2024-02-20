@@ -19,8 +19,6 @@ export class AppComponent implements AfterViewInit {
   currentLanguage: string = 'en';
 
 
-  
-
   constructor(private el: ElementRef, private renderer: Renderer2, private translate: TranslateService) {
     translate.setDefaultLang('en');
    }
