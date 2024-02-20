@@ -2,7 +2,7 @@
     <div class="main-container">
 
         <div class="responsive-button-container">
-            <a class="responsive-button" href="#contact-page"> <button> Get in touch</button></a>
+            <a class="responsive-button" href="#contact-page"> <button [ngClass]="{'larger-button': appComponent.isGermanText()}"> {{'getInTouch' | translate}}</button></a>
         </div>
         
         <div class="left-side slide-in" data-direction="left">
@@ -50,13 +50,12 @@
             </div>
         </div>
         <div class="right-side slide-in" data-direction="right">
-            <div class="headline">My skills
-                
+            <div class="headline">
+                {{'mySkills' | translate}}
             </div>
-            <div class="description">I have gained experience in building projects with various <br> front end
-                technologies
-                and concepts</div>
-            <a href="#contact-page"> <button> Get in touch</button></a>
+            <div [innerHTML]="'skillText' | translate" class="description">
+           </div>
+            <a href="#contact-page"> <button [ngClass]="{'larger-button': appComponent.isGermanText()}"> {{'getInTouch' | translate}}</button></a>
         </div>
 
     </div>

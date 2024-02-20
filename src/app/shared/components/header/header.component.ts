@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AppComponent } from '../../../app.component';
+
 
 @Component({
   selector: 'app-header',
@@ -11,6 +13,8 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   isDropdownOpen: boolean = false;
   iconState: number = 0;
+
+  appcomponent = inject(AppComponent)
 
   
   getIconSrc(): string {

@@ -1,22 +1,39 @@
-import { Component, AfterViewInit, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, HostListener, OnInit, Renderer2, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { MainContentComponent } from './main-content/main-content/main-content.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, MainContentComponent, FooterComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, MainContentComponent, FooterComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements AfterViewInit {
   title = 'portfolio';
-  //Ab hier kann alles gelöscht werden falls es nicht klappt 
-  constructor(private el: ElementRef, private renderer: Renderer2) { }
+  currentLanguage: string = 'en';
 
+
+  
+
+  constructor(private el: ElementRef, private renderer: Renderer2, private translate: TranslateService) {
+    translate.setDefaultLang('en');
+   }
+
+   switchLanguage(language: string) {
+    this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
+    this.translate.use(this.currentLanguage);
+  }
+
+
+  isGermanText() {
+    return this.translate.instant('getInTouch') === 'Kontaktiere mich'; // Hier den deutschen Text eintragen
+  }
   
 
   private directionMap: { [key: string]: string } = {
