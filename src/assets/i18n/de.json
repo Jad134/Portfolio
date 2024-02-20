@@ -11,6 +11,21 @@
     "joinDescription": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
     "polloLocoDecscription": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf El-Pollo-Loco, Münzen und Giftflaschen zu finden, um gegen das Killerhuhn zu kämpfen.",
     "pokedexDescription": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert.",
-    "anotherProject": "Beschreibung eines anderen Projekts"
-    
+    "anotherProject": "Beschreibung eines anderen Projekts",
+    "contact":"Kontakt",
+    "contactHeadline":"Gibt es ein Problem zu lösen?",
+    "contactMeText":"Kontaktieren Sie mich über dieses Formular. Ich würde mich sehr freuen, von Ihnen zu hören, Ihre Ideen kennenzulernen und zu Ihren Projekten durch meine Arbeit beizutragen.",
+    "needDeveloper": "Brauchen Sie einen Frontend-Entwickler? <b>Kontaktieren Sie mich!</b>",
+    "mailSucces": "Mail wurde gesendet",
+    "yourName": "Dein Name",
+    "yourMail": "Deine E-Mail",
+    "yourMessage": "Deine Message",
+    "iveRead": "Ich habe die",
+    "privacePolicy": "Datenschutzrichtlinie",
+    "agree": " gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+    "requiredName": "Dein Name ist erforderlich",
+    "requiredMail": "Deine E-mail ist erforderlich",
+    "requiredMessage": "Eine Nachricht ist erforderlich",
+    "acceptPolicy": "Bitte akzeptieren Sie die Datenschutzbestimmungen",
+    "sendMessage": "Naricht senden"
   }

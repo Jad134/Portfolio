@@ -11,6 +11,23 @@
     "joinDescription": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     "polloLocoDecscription": "A simple Jump-and-Run game based on an object-oriented approach. Help El-Pollo-Loco to find coins and poison bottles to fight against the killer chicken.",
     "pokedexDescription":"Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
-    "anotherProject": "Description of another project"
+    "anotherProject": "Description of another project",
+    "contact":"Contact",
+    "contactHeadline":"Got a problem to solve?",
+    "contactMeText":"Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.",
+    "needDeveloper": "Need a Frontend developer? <b>Contact me!</b>",
+    "mailSucces": "Mail has been sent",
+    "yourName": "Your name",
+    "yourMail": "Your email",
+    "yourMessage": "Your message",
+    "iveRead": "I've read the",
+    "privacePolicy": "privacy policy",
+    "agree": "and agree to the processing of my data as outlined.",
+    "requiredName": "Your name is required",
+    "requiredMail": "Your Email is required",
+    "requiredMessage": "Your message is empty",
+    "acceptPolicy": "Please accept the privacy policy",
+    "sendMessage": "Send Message"
+
     
 }

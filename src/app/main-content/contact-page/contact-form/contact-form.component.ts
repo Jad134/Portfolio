@@ -2,12 +2,13 @@ import { Component, ViewChild, ElementRef, inject, HostListener, Input } from '@
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ContactPageComponent } from '../contact-page.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, ContactPageComponent],
+  imports: [FormsModule, ReactiveFormsModule, ContactPageComponent, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.scss', './responsive-form.scss']
 })

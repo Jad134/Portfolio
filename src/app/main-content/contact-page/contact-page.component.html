@@ -2,22 +2,20 @@
     <img class="shadow" src="assets/img/background/purple_shadow_footer.png" alt="">
     <div class="headline slide-in" data-direction="left">
         <div class="purple-line"></div>
-        <span>Contact</span>
+        <span>{{'contact' | translate}}</span>
     </div>
     <div class="content-container">
         <div class="left-side slide-in" data-direction="left">
             <div class="info-text">
-                <span>Got a problem to solve?</span>
-                <span>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing
-                    to
-                    your projects with my work.</span>
-                <span>Need a Frontend developer? <b>Contact me!</b></span>
+                <span>{{'contactHeadline' | translate}}</span>
+                <span>{{"contactMeText" | translate}}</span>
+                <span [innerHTML]="'needDeveloper' | translate"></span>
             </div>
         </div>
         <div class="right-side">
             <app-contact-form class="slide-in" data-direction="right"></app-contact-form>
             
-                <h3 #mailSucces class="mail-succes"> Mail has been sent </h3>
+                <h3 #mailSucces class="mail-succes"> {{'mailSucces' | translate}} </h3>
             
         </div>
     </div>

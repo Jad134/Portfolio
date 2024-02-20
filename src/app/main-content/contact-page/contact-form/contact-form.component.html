@@ -1,28 +1,28 @@
 <form id="form" autocomplete="off" (ngSubmit)="onSubmit(contactForm)" ngNativeValidate #contactForm="ngForm" novalidate>
     <div class="input-areas">
-        <input class="input" [(ngModel)]="contactData.name" required id="name" placeholder="Your name" type="text"
+        <input class="input" [(ngModel)]="contactData.name" required id="name" placeholder="{{'yourName' | translate}}" type="text"
             name="name" #nameField>
-        <div #nameRequired class="required-message">Your name is required</div>
+        <div #nameRequired class="required-message">{{'requiredName' | translate}}</div>
     </div>
     <div class="input-areas">
-        <input class="input" [(ngModel)]="contactData.email" required id="email" placeholder="Your email" type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        <input class="input" [(ngModel)]="contactData.email" required id="email" placeholder="{{'yourMail' | translate}}" type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             name="email" #mailField>
-        <div #mailRequired class="required-message">Your Email is required</div>
+        <div #mailRequired class="required-message">{{'requiredMail' | translate}}</div>
     </div>
     <div class="input-areas">
         <textarea class="textarea" [(ngModel)]="contactData.message" id="message" required id="textarea"
-            placeholder="Your message" name="message" cols="30" rows="10" #textField></textarea>
-        <div #textRequired class="required-message"> Your message is empty</div>
+            placeholder="{{'yourMessage' | translate}}" name="message" cols="30" rows="10" #textField></textarea>
+        <div #textRequired class="required-message"> {{'requiredMessage' | translate}}</div>
         <div class="privacy">
             <div class="agreement">
                 <img (click)="togglePrivacy()"
                     [src]="privacyChecked ? 'assets/img/icons/checked.png' : 'assets/img/icons/unchecked.png'" alt="">
-                I've read the <a target="_blank" href="privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.
+                {{'iveRead' | translate}} <a target="_blank" href="privacy-policy">{{'privacePolicy' | translate}}</a> {{'agree' | translate}}
             </div>
-            <div #infoField class="accept-info">Please accept the privacy policy</div>
+            <div #infoField class="accept-info">{{'acceptPolicy' | translate}}</div>
         </div>
     </div>
-    <button (click)="validateForm()" disabled class="sendButton" #sendButton>Send Message
+    <button (click)="validateForm()" disabled class="sendButton" #sendButton>{{'sendMessage' | translate}}
         <div (click)=" privacyWarning()" class="overlay">
         </div>
     </button>
