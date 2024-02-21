@@ -119,3 +119,17 @@
     cursor: pointer;
     font-weight: bold;
   }
+
+  .language-circle{
+    cursor: pointer;
+    height: 80px;
+    background-color: rgb(151, 71, 255, 1);
+    width: 80px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 20px;
+  }
