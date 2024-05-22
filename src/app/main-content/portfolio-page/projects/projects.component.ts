@@ -42,19 +42,19 @@ export class ProjectsComponent {
     },
     {
       imageUrl: 'assets/img/projects/pokedex.png',
+      projectName: 'DABubble',
+      languages: 'Angular | TypeScript | Firebase |  HTML | SCSS |',
+      projectDescription: 'daBubbleDescription',
+      githubLink: 'https://github.com/Jad134/dabubble',
+      projectLink: 'https://jad-portfolio.de/DaBubble/'
+    },
+    {
+      imageUrl: 'assets/img/projects/pokedex.png',
       projectName: 'Pokedex',
       languages: 'API | JavaScript | HTML | CSS',
       projectDescription: 'pokedexDescription',
       githubLink: 'https://github.com/Jad134/PokeDex',
       projectLink: 'http://jad-el-nader.developerakademie.net/JS/Pokedex/index.html'
-    },
-    {
-      imageUrl: 'assets/img/projects/pokedex.png',
-      projectName: 'Another Project',
-      languages: 'API | JavaScript | HTML | CSS',
-      projectDescription: 'anotherProject',
-      githubLink: 'https://github.com/Jad134/Join',
-      projectLink: 'http://jad-el-nader.developerakademie.net/Join/index.html'
     },
   ];
 

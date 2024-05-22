@@ -26,13 +26,9 @@ export class ContactFormComponent {
   @ViewChild('textRequired') textRequired!: ElementRef;
 
 
-
-  constructor() {
-
-  }
+  constructor() {}
 
   contactPage = ContactPageComponent;
-
   http = inject(HttpClient)
   privacyChecked: boolean = false;
   mailValid: boolean = false;

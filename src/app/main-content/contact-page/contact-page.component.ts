@@ -13,8 +13,9 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact-page.component.html',
   styleUrls: ['./contact-page.component.scss','./responsive-contact.scss']
 })
+
+
 export class ContactPageComponent {
   @ViewChild('mailSucces') mailSucces!: ElementRef;
 
- 
 }
