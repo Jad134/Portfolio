@@ -41,7 +41,7 @@ export class ProjectsComponent {
       projectLink: 'http://jad-el-nader.developerakademie.net/Pollo%20Loco/index.html'
     },
     {
-      imageUrl: 'assets/img/projects/pokedex.png',
+      imageUrl: 'assets/img/projects/dabubble.png',
       projectName: 'DABubble',
       languages: 'Angular | TypeScript | Firebase |  HTML | SCSS |',
       projectDescription: 'daBubbleDescription',
