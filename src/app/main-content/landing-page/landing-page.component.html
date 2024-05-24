@@ -12,7 +12,7 @@
         </div>
         <div class="right-side">
             <div class="about-me">
-                <div class="introduction"> <span class="first-letter">I</span> am</div>
+                <div [ngClass]="{'german-font-size': appcomponent.currentLanguage === 'de'}" class="introduction"> <span class="first-letter"> {{'i' | translate}}</span>  {{'am' | translate}}</div>
                 <div class="description">
                     <h1>Jad El Nader</h1>
                     <h2> Frontend Developer</h2>
