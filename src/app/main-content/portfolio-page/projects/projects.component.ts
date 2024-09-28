@@ -56,6 +56,14 @@ export class ProjectsComponent {
       githubLink: 'https://github.com/Jad134/PokeDex',
       projectLink: 'http://jad-el-nader.developerakademie.net/JS/Pokedex/index.html'
     },
+    {
+      imageUrl: 'assets/img/projects/videoflix.png',
+      projectName: 'VideoFlix',
+      languages: 'Python | Django | Angular | SCSS',
+      projectDescription: 'videoflixDescription',
+      githubLink: 'https://github.com/Jad134/videoflix-backend',
+      projectLink: 'https://jad-portfolio.de/VideoFlix/'
+    },
   ];
 
 

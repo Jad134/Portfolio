@@ -14,6 +14,7 @@
     "polloLocoDecscription": "A simple Jump-and-Run game based on an object-oriented approach. Help El-Pollo-Loco to find coins and poison bottles to fight against the killer chicken.",
     "pokedexDescription":"Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
     "daBubbleDescription": "DABubble is a modern chat app developed with Angular and offers numerous features such as posting chats, creating channels, liking stories and replying to chats for a seamless communication experience.",
+    "videoflixDescription": "Videoflix is a replica of a streaming service focused on the simple and seamless viewing of short videos. The core of this project is the complete custom development of the backend using modern technologies such as Django, Django REST Framework, and PostgreSQL.",
     "contact":"Contact",
     "contactHeadline":"Got a problem to solve?",
     "contactMeText":"Contact me through this form. I am interested in hearing you, knowing your ideas and contributing to your projects with my work.",
