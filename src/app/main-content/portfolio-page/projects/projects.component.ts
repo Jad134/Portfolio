@@ -25,6 +25,22 @@ export class ProjectsComponent {
 
   projects = [
     {
+      imageUrl: 'assets/img/projects/videoflix.png',
+      projectName: 'VideoFlix',
+      languages: 'Python | Django | Angular | SCSS',
+      projectDescription: 'videoflixDescription',
+      githubLink: 'https://github.com/Jad134/videoflix-backend',
+      projectLink: 'https://jad-portfolio.de/VideoFlix/'
+    },
+    {
+      imageUrl: 'assets/img/projects/dabubble.png',
+      projectName: 'DABubble',
+      languages: 'Angular | TypeScript | Firebase |  HTML | SCSS |',
+      projectDescription: 'daBubbleDescription',
+      githubLink: 'https://github.com/Jad134/dabubble',
+      projectLink: 'https://jad-portfolio.de/DaBubble/'
+    },
+    {
       imageUrl: 'assets/img/projects/join.png',
       projectName: 'Join',
       languages: 'JavaScript | HTML | CSS',
@@ -40,14 +56,7 @@ export class ProjectsComponent {
       githubLink: 'https://github.com/Jad134/EL-Pollo-Loco',
       projectLink: 'http://jad-el-nader.developerakademie.net/Pollo%20Loco/index.html'
     },
-    {
-      imageUrl: 'assets/img/projects/dabubble.png',
-      projectName: 'DABubble',
-      languages: 'Angular | TypeScript | Firebase |  HTML | SCSS |',
-      projectDescription: 'daBubbleDescription',
-      githubLink: 'https://github.com/Jad134/dabubble',
-      projectLink: 'https://jad-portfolio.de/DaBubble/'
-    },
+    
     {
       imageUrl: 'assets/img/projects/pokedex.png',
       projectName: 'Pokedex',
@@ -56,14 +65,7 @@ export class ProjectsComponent {
       githubLink: 'https://github.com/Jad134/PokeDex',
       projectLink: 'http://jad-el-nader.developerakademie.net/JS/Pokedex/index.html'
     },
-    {
-      imageUrl: 'assets/img/projects/videoflix.png',
-      projectName: 'VideoFlix',
-      languages: 'Python | Django | Angular | SCSS',
-      projectDescription: 'videoflixDescription',
-      githubLink: 'https://github.com/Jad134/videoflix-backend',
-      projectLink: 'https://jad-portfolio.de/VideoFlix/'
-    },
+   
   ];
 
 

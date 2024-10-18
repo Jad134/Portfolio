@@ -15,7 +15,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements AfterViewInit {
-  title = 'portfolio';
+  title = 'Jad El Nader';
   currentLanguage: string = 'en';
 
 
