@@ -8,7 +8,7 @@
 
     .main-container {
         max-width: 1920px;
-        
+
     }
 
     .profile-pic {
@@ -42,7 +42,7 @@
         padding-top: 100px;
     }
 
-    .scroll-info{
+    .scroll-info {
         right: 0;
     }
 }
@@ -82,6 +82,18 @@
 @media (max-height: 950px) {
     .background-widescreen {
         top: 45%;
+    }
+}
+
+// Bugfix 7.1. for rensponsive
+
+@media (max-width: 1565px) and (min-width: 1430px) {
+    .about-me{
+        flex-direction: column;
+    }
+
+    .introduction{
+        transform: rotate(0deg) !important;
     }
 }
 
@@ -170,10 +182,10 @@
     .links {
         position: relative;
         width: auto;
-       
+
     }
 
-    .wide-screen-align{
+    .wide-screen-align {
         height: auto;
     }
 }
